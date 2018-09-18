@@ -1,8 +1,7 @@
 FROM debian:stable-slim
 
 RUN apt-get update && apt-get -uy upgrade
-RUN apt-get -y install --no-install-recommends ca-certificates \
-  && update-ca-certificates
+RUN apt-get -y install ca-certificates && update-ca-certificates
 
 FROM scratch
 
